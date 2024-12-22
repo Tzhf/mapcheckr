@@ -73,6 +73,14 @@
                         />
                         <hr />
                     </div>
+                    <div v-if="settings.rejectUnofficial">
+                        <Checkbox
+                            v-model:checked="settings.changeToOfficial"
+                            label="Change unofficial to official"
+                            optText="Change unofficial locations to official within the radius."
+                        />
+                        <hr />
+                    </div>
 
                     <Checkbox
                         @change="settings.rejectNoLinks ? (settings.rejectNoLinksIfNoHeading = true) : true"
